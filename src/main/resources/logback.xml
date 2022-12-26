@@ -8,7 +8,7 @@
         </encoder>
     </appender>
 
-    <logger name="com.devopstrainingit.account">
+    <logger name="com.visualpathit.account">
         <level value="debug"/>
     </logger>
 
