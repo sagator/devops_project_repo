@@ -10,8 +10,8 @@ pipeline {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "172.31.40.209:8081"
-        NEXUS_REPOSITORY = "vprofile-release"
-	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
+        NEXUS_REPOSITORY = "devopstraining-release"
+	NEXUS_REPOGRP_ID    = "devopstraining-grp-repo"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
     }
@@ -61,8 +61,8 @@ pipeline {
 
           steps {
             withSonarQubeEnv('sonar-pro') {
-               sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
-                   -Dsonar.projectName=vprofile-repo \
+               sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=devopstraining \
+                   -Dsonar.projectName=devopstraining-repo \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=src/ \
                    -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
